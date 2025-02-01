@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encabezados y Párrafos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Añadimos iconos y fuentes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navbar mejorado -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-code me-2"></i>
+                Guía HTML
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="estructura.html"><i class="fas fa-sitemap me-1"></i>Estructura</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="encabezadosParrafos.html"><i class="fas fa-heading me-1"></i>Encabezados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listas.html"><i class="fas fa-list me-1"></i>Listas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tablas.html"><i class="fas fa-table me-1"></i>Tablas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formulario.html"><i class="fas fa-wpforms me-1"></i>Formulario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inputs.html"><i class="fas fa-keyboard me-1"></i>Inputs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fotoVideo.html"><i class="fas fa-play-circle me-1"></i>Audio y Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iframe.html"><i class="fas fa-window-maximize me-1"></i>Iframes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="semantica.html"><i class="fas fa-project-diagram me-1"></i>Semántica</a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><i class="fas fa-images me-1"></i>Imágenes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enlaces.html"><i class="fas fa-link me-1"></i>Enlaces</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <!-- Header con estilo mejorado -->
+        <div class="row mb-5">
+            <div class="col-lg-12 text-center">
+                <h1 class="display-4 mb-3">Encabezados y Párrafos</h1>
+                <p class="lead text-muted">Aprende a estructurar tu contenido HTML de manera jerárquica y profesional</p>
+                <hr class="my-4">
+            </div>
+        </div>
+
+        <!-- Contenido principal en cards -->
+        <div class="row g-4">
+            <!-- Card de Encabezados -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="fas fa-heading me-2"></i>¿Qué son los encabezados?</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Los encabezados (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) son etiquetas utilizadas para definir títulos o subtítulos de diferentes niveles en una página. Un <code>&lt;h1&gt;</code> es el título más importante, mientras que <code>&lt;h6&gt;</code> es el de menor importancia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card de Párrafos -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="fas fa-paragraph me-2"></i>¿Qué son los párrafos?</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Los párrafos se crean con la etiqueta <code>&lt;p&gt;</code> y se utilizan para escribir bloques de texto. Son fundamentales para organizar el contenido de manera clara y legible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo práctico -->
+            <div class="col-12 mt-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="fas fa-laptop-code me-2"></i>Ejemplo Práctico</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-4 bg-light border rounded">
+                                    <h1 class="h1">Encabezado H1</h1>
+                                    <h2 class="h2">Encabezado H2</h2>
+                                    <h3 class="h3">Encabezado H3</h3>
+                                    <h4 class="h4">Encabezado H4</h4>
+                                    <h5 class="h5">Encabezado H5</h5>
+                                    <h6 class="h6">Encabezado H6</h6>
+                                    <p>Este es el primer párrafo de prueba.</p>
+                                    <p>Este es el segundo párrafo con más texto.</p>
+                                    <p>Este es el tercer párrafo con información adicional.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4">
+                                    <h4 class="mb-3">Código Fuente</h4>
+                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9em;">
+&lt;h1&gt;Encabezado H1&lt;/h1&gt;
+&lt;h2&gt;Encabezado H2&lt;/h2&gt;
+&lt;h3&gt;Encabezado H3&lt;/h3&gt;
+&lt;h4&gt;Encabezado H4&lt;/h4&gt;
+&lt;h5&gt;Encabezado H5&lt;/h5&gt;
+&lt;h6&gt;Encabezado H6&lt;/h6&gt;
+
+&lt;p&gt;Este es el primer párrafo...&lt;/p&gt;
+&lt;p&gt;Este es el segundo párrafo...&lt;/p&gt;
+&lt;p&gt;Este es el tercer párrafo...&lt;/p&gt;</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer mejorado -->
+        <footer class="mt-5 py-4 text-center border-top">
+            <p class="mb-0 text-muted">
+                <i class="fas fa-code me-2"></i>
+                &copy; 2025 - Guía HTML Básica. Todos los derechos reservados.
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

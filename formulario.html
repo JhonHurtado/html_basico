@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- [Navbar omitido por ser el mismo] -->
+         <!-- Navbar mejorado -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-code me-2"></i>
+                Guía HTML
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="estructura.html"><i class="fas fa-sitemap me-1"></i>Estructura</a></li>
+                    <li class="nav-item"><a class="nav-link" href="encabezadosParrafos.html"><i class="fas fa-heading me-1"></i>Encabezados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listas.html"><i class="fas fa-list me-1"></i>Listas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tablas.html"><i class="fas fa-table me-1"></i>Tablas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="formulario.html"><i class="fas fa-wpforms me-1"></i>Formulario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inputs.html"><i class="fas fa-keyboard me-1"></i>Inputs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fotoVideo.html"><i class="fas fa-play-circle me-1"></i>Audio y Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iframe.html"><i class="fas fa-window-maximize me-1"></i>Iframes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="semantica.html"><i class="fas fa-project-diagram me-1"></i>Semántica</a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><i class="fas fa-images me-1"></i>Imágenes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="enlaces.html"><i class="fas fa-link me-1"></i>Enlaces</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <!-- Header mejorado -->
+        <div class="row mb-5">
+            <div class="col-lg-12 text-center">
+                <h1 class="display-4 mb-3">Formularios en HTML</h1>
+                <p class="lead text-muted">Aprende a crear formularios interactivos para recopilar información de los usuarios</p>
+                <hr class="my-4">
+            </div>
+        </div>
+
+        <!-- Introducción -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text">Los formularios en HTML son elementos interactivos que permiten recopilar información de los usuarios. Se crean con la etiqueta <code>&lt;form&gt;</code> y pueden contener diversos tipos de campos de entrada para capturar diferentes tipos de datos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elementos básicos -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="fas fa-puzzle-piece me-2"></i>Elementos Básicos de un Formulario</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="border rounded p-3 h-100 bg-light">
+                                    <h3 class="h5 text-primary"><i class="fas fa-keyboard me-2"></i>Campos de Entrada</h3>
+                                    <code>&lt;input&gt;</code>
+                                    <p class="mt-2 mb-0">Define campos para diferentes tipos de datos: texto, email, número, contraseña, etc.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="border rounded p-3 h-100 bg-light">
+                                    <h3 class="h5 text-primary"><i class="fas fa-paragraph me-2"></i>Área de Texto</h3>
+                                    <code>&lt;textarea&gt;</code>
+                                    <p class="mt-2 mb-0">Crea un campo para texto multilínea, ideal para comentarios o mensajes largos.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="border rounded p-3 h-100 bg-light">
+                                    <h3 class="h5 text-primary"><i class="fas fa-list-ul me-2"></i>Listas Desplegables</h3>
+                                    <code>&lt;select&gt;</code>
+                                    <p class="mt-2 mb-0">Crea menús desplegables para seleccionar una o varias opciones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejemplo Práctico -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="fas fa-laptop-code me-2"></i>Ejemplo Práctico</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="p-4 bg-light border rounded">
+                                    <h3 class="h5 mb-3">Formulario de Contacto</h3>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="nombre" class="form-label">Nombre:</label>
+                                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Correo Electrónico:</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="mensaje" class="form-label">Mensaje:</label>
+                                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-flex">
+                                            <button type="submit" class="btn btn-primary me-md-2">
+                                                <i class="fas fa-paper-plane me-2"></i>Enviar
+                                            </button>
+                                            <button type="reset" class="btn btn-secondary">
+                                                <i class="fas fa-eraser me-2"></i>Borrar
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4">
+                                    <h3 class="h5 mb-3">Código Fuente</h3>
+                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9em;">
+&lt;form action="#" method="POST"&gt;
+    &lt;div&gt;
+        &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" 
+               id="nombre" 
+               name="nombre" 
+               required&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;label for="email"&gt;
+            Correo Electrónico:
+        &lt;/label&gt;
+        &lt;input type="email" 
+               id="email" 
+               name="email" 
+               required&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;label for="mensaje"&gt;
+            Mensaje:
+        &lt;/label&gt;
+        &lt;textarea id="mensaje" 
+                  name="mensaje" 
+                  rows="4"&gt;
+        &lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;button type="submit"&gt;
+        Enviar
+    &lt;/button&gt;
+    &lt;button type="reset"&gt;
+        Borrar
+    &lt;/button&gt;
+&lt;/form&gt;</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-5 py-4 text-center border-top">
+            <p class="mb-0 text-muted">
+                <i class="fas fa-code me-2"></i>
+                &copy; 2025 - Guía HTML Básica. Todos los derechos reservados.
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
