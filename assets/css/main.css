@@ -1,0 +1,504 @@
+/* =================================
+   GUÍA HTML BÁSICO - ESTILOS GLOBALES
+   ================================= */
+
+:root {
+  /* Paleta de colores principal */
+  --primary-color: #0d6efd;
+  --primary-dark: #0b5ed7;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #0dcaf0;
+  
+  /* Colores de fondo */
+  --bg-light: #f8f9fa;
+  --bg-dark: #212529;
+  --bg-code: #1e1e1e;
+  
+  /* Tipografía */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+  
+  /* Bordes y sombras */
+  --border-radius: 0.5rem;
+  --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --box-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* =================================
+   ESTILOS BASE Y TIPOGRAFÍA
+   ================================= */
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height-base);
+  background-color: var(--bg-light);
+  scroll-behavior: smooth;
+}
+
+/* Mejoras de tipografía */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.1rem; }
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: #495057;
+}
+
+/* =================================
+   NAVEGACIÓN MEJORADA
+   ================================= */
+
+.navbar {
+  box-shadow: var(--box-shadow);
+  border-bottom: 3px solid var(--primary-dark);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius);
+  margin: 0 var(--spacing-xs);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+/* =================================
+   TARJETAS Y CONTENEDORES
+   ================================= */
+
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5 {
+  color: white;
+  margin-bottom: 0;
+}
+
+/* =================================
+   BLOQUES DE CÓDIGO MEJORADOS
+   ================================= */
+
+pre {
+  background-color: var(--bg-code);
+  color: #f8f8f2;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-left: 4px solid var(--primary-color);
+  position: relative;
+}
+
+pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--info-color));
+}
+
+code {
+  background-color: #f1f3f4;
+  color: var(--danger-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* =================================
+   ELEMENTOS INTERACTIVOS
+   ================================= */
+
+.btn {
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border: none;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-color: var(--primary-dark);
+}
+
+/* =================================
+   ALERTAS Y NOTIFICACIONES
+   ================================= */
+
+.alert {
+  border: none;
+  border-radius: var(--border-radius);
+  border-left: 4px solid;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+}
+
+.alert-primary { border-left-color: var(--primary-color); }
+.alert-success { border-left-color: var(--success-color); }
+.alert-warning { border-left-color: var(--warning-color); }
+.alert-danger { border-left-color: var(--danger-color); }
+.alert-info { border-left-color: var(--info-color); }
+
+/* =================================
+   FORMULARIOS MEJORADOS
+   ================================= */
+
+.form-control,
+.form-select {
+  border-radius: var(--border-radius);
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  transform: translateY(-1px);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* =================================
+   TABLAS RESPONSIVAS
+   ================================= */
+
+.table {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.table thead th {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* =================================
+   MULTIMEDIA Y CONTENIDO
+   ================================= */
+
+img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+video,
+audio {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+iframe {
+  border-radius: var(--border-radius);
+  border: 2px solid #e9ecef;
+}
+
+/* =================================
+   EFECTOS ESPECIALES
+   ================================= */
+
+.highlight-box {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-left: 4px solid var(--primary-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-lg) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.solution-toggle {
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.solution-toggle:hover {
+  background-color: rgba(13, 110, 253, 0.2);
+  transform: translateX(5px);
+}
+
+.solution-code {
+  display: none;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+/* =================================
+   FOOTER MEJORADO
+   ================================= */
+
+footer {
+  background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+  color: white;
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-xl);
+  border-top: 3px solid var(--primary-color);
+}
+
+footer a {
+  color: var(--info-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* =================================
+   UTILIDADES Y HELPERS
+   ================================= */
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.border-gradient {
+  border: 3px solid;
+  border-image: linear-gradient(135deg, var(--primary-color), var(--info-color)) 1;
+}
+
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  box-shadow: var(--box-shadow-lg);
+}
+
+/* =================================
+   RESPONSIVIDAD AVANZADA
+   ================================= */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
+  .card {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  pre {
+    padding: var(--spacing-md);
+    font-size: 0.8rem;
+  }
+  
+  .alert {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .card-body {
+    padding: var(--spacing-md);
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/* =================================
+   MODO OSCURO (OPCIONAL)
+   ================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: #1a1a1a;
+    --bg-dark: #000000;
+  }
+  
+  body {
+    background-color: var(--bg-light);
+    color: #f8f9fa;
+  }
+  
+  .card {
+    background-color: #2d2d2d;
+    color: #f8f9fa;
+  }
+  
+  p {
+    color: #d1d5db;
+  }
+}
+
+/* =================================
+   ANIMACIONES DE ENTRADA
+   ================================= */
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
