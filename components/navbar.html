@@ -1,0 +1,232 @@
+<!-- Navbar Optimizado - Componente Reutilizable -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg" style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 50%, #495057 100%);">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <i class="fas fa-code me-2 text-warning fs-4"></i>
+            <span class="text-gradient">HTML Básico</span>
+        </a>
+        
+        <!-- Toggle button for mobile -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-auto">
+                <!-- Inicio -->
+                <li class="nav-item">
+                    <a class="nav-link px-3 rounded-pill mx-1" href="index.html" data-page="index">
+                        <i class="fas fa-home me-1"></i>
+                        <span class="d-none d-lg-inline">Inicio</span>
+                    </a>
+                </li>
+                
+                <!-- Fundamentos Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-graduation-cap me-1"></i>
+                        <span class="d-none d-lg-inline">Fundamentos</span>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="encabezadosParrafos.html" data-page="encabezadosParrafos">
+                            <i class="fas fa-heading me-2 text-primary"></i>Encabezados y Párrafos</a></li>
+                        <li><a class="dropdown-item" href="listas.html" data-page="listas">
+                            <i class="fas fa-list me-2 text-success"></i>Listas</a></li>
+                        <li><a class="dropdown-item" href="enlaces.html" data-page="enlaces">
+                            <i class="fas fa-link me-2 text-info"></i>Enlaces</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="imagenes.html" data-page="imagenes">
+                            <i class="fas fa-images me-2 text-warning"></i>Imágenes</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Estructuras Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-table me-1"></i>
+                        <span class="d-none d-lg-inline">Estructuras</span>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="tablas.html" data-page="tablas">
+                            <i class="fas fa-table me-2 text-primary"></i>Tablas</a></li>
+                        <li><a class="dropdown-item" href="formulario.html" data-page="formulario">
+                            <i class="fas fa-wpforms me-2 text-success"></i>Formularios</a></li>
+                        <li><a class="dropdown-item" href="inputs.html" data-page="inputs">
+                            <i class="fas fa-keyboard me-2 text-info"></i>Inputs</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="semantica.html" data-page="semantica">
+                            <i class="fas fa-sitemap me-2 text-warning"></i>HTML Semántico</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Multimedia Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-play-circle me-1"></i>
+                        <span class="d-none d-lg-inline">Multimedia</span>
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="fotoVideo.html" data-page="fotoVideo">
+                            <i class="fas fa-video me-2 text-primary"></i>Audio y Video</a></li>
+                        <li><a class="dropdown-item" href="iframe.html" data-page="iframe">
+                            <i class="fas fa-window-maximize me-2 text-success"></i>iFrames</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Ejercicios -->
+                <li class="nav-item">
+                    <a class="nav-link px-3 rounded-pill mx-1" href="ejercicios.html" data-page="ejercicios">
+                        <i class="fas fa-laptop-code me-1"></i>
+                        <span class="d-none d-lg-inline">Ejercicios</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Right side buttons -->
+            <div class="d-flex align-items-center">
+                <!-- Progress indicator -->
+                <div class="me-3 d-none d-md-block">
+                    <small class="text-light opacity-75">Progreso:</small>
+                    <div class="progress bg-secondary" style="width: 80px; height: 4px;">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%"></div>
+                    </div>
+                </div>
+                
+                <!-- GitHub link -->
+                <a href="https://github.com/JhonHurtado/html_basico" target="_blank" rel="noopener"
+                   class="btn btn-outline-light btn-sm rounded-pill me-2" title="Ver en GitHub">
+                    <i class="fab fa-github"></i>
+                    <span class="d-none d-lg-inline ms-1">GitHub</span>
+                </a>
+                
+                <!-- Best practices link -->
+                <a href="BEST_PRACTICES.md" target="_blank"
+                   class="btn btn-warning btn-sm rounded-pill" title="Mejores Prácticas">
+                    <i class="fas fa-book"></i>
+                    <span class="d-none d-lg-inline ms-1">Guía</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Navigation Enhancement Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current page from URL
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+    
+    // Set active nav item
+    const navLinks = document.querySelectorAll('[data-page]');
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('data-page');
+        if (linkPage === currentPage) {
+            link.classList.add('active', 'bg-warning', 'text-dark');
+            link.style.fontWeight = 'bold';
+        }
+    });
+    
+    // Smooth dropdown animations
+    const dropdownElements = document.querySelectorAll('.dropdown-menu');
+    dropdownElements.forEach(dropdown => {
+        dropdown.addEventListener('show.bs.dropdown', function() {
+            this.style.animationName = 'fadeInDown';
+            this.style.animationDuration = '0.3s';
+        });
+    });
+    
+    // Update progress based on current page
+    const pageOrder = ['index', 'encabezadosParrafos', 'listas', 'enlaces', 'imagenes', 'tablas', 'formulario', 'inputs', 'fotoVideo', 'iframe', 'semantica', 'ejercicios'];
+    const currentIndex = pageOrder.indexOf(currentPage);
+    const progressPercent = currentIndex >= 0 ? ((currentIndex + 1) / pageOrder.length) * 100 : 0;
+    
+    const progressBar = document.querySelector('.progress-bar');
+    if (progressBar) {
+        setTimeout(() => {
+            progressBar.style.width = progressPercent + '%';
+        }, 500);
+    }
+});
+</script>
+
+<!-- Additional CSS for navbar enhancements -->
+<style>
+.navbar-nav .nav-link {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.dropdown-menu {
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.25rem;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 0 0.5rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #fff, #ffc107);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0.25rem 0;
+        border-radius: 25px;
+    }
+    
+    .dropdown-menu {
+        background-color: rgba(0,0,0,0.1);
+        border: none;
+        box-shadow: none;
+    }
+    
+    .dropdown-item {
+        color: rgba(255,255,255,0.9);
+    }
+    
+    .dropdown-item:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+    }
+}
+</style>
