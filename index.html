@@ -3,154 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estructura de un Documento HTML</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Guía completa de HTML básico - Estructura y fundamentos del desarrollo web">
+    <title>HTML Básico - Estructura y Fundamentos | Guía Completa</title>
+    
+    <!-- CDN Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="bg-light">
-    <!-- [Navbar omitido por ser el mismo] -->
-         <!-- Navbar mejorado -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+<body class="fade-in">
+    
+    <!-- Navbar Optimizado -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg" style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 50%, #495057 100%);">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="fas fa-code me-2"></i>
-                Guía HTML
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                <i class="fas fa-code me-2 text-warning fs-4"></i>
+                <span class="text-gradient">HTML Básico</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sitemap me-1"></i>Estructura</a></li>
-                    <li class="nav-item"><a class="nav-link" href="encabezadosParrafos.html"><i class="fas fa-heading me-1"></i>Encabezados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ejercicios.html"><i class="fas fa-book me-1"></i>ejercicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="listas.html"><i class="fas fa-list me-1"></i>Listas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tablas.html"><i class="fas fa-table me-1"></i>Tablas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="formulario.html"><i class="fas fa-wpforms me-1"></i>Formulario</a></li>
-                    <li class="nav-item"><a class="nav-link" href="inputs.html"><i class="fas fa-keyboard me-1"></i>Inputs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fotoVideo.html"><i class="fas fa-play-circle me-1"></i>Audio y Video</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iframe.html"><i class="fas fa-window-maximize me-1"></i>Iframes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="semantica.html"><i class="fas fa-project-diagram me-1"></i>Semántica</a></li>
-                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><i class="fas fa-images me-1"></i>Imágenes</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="enlaces.html"><i class="fas fa-link me-1"></i>Enlaces</a></li>
+                <ul class="navbar-nav ms-auto me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 rounded-pill mx-1" href="index.html" data-page="index">
+                            <i class="fas fa-home me-1"></i><span class="d-none d-lg-inline">Inicio</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-graduation-cap me-1"></i><span class="d-none d-lg-inline">Fundamentos</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="encabezadosParrafos.html" data-page="encabezadosParrafos">
+                                <i class="fas fa-heading me-2 text-primary"></i>Encabezados y Párrafos</a></li>
+                            <li><a class="dropdown-item" href="listas.html" data-page="listas">
+                                <i class="fas fa-list me-2 text-success"></i>Listas</a></li>
+                            <li><a class="dropdown-item" href="enlaces.html" data-page="enlaces">
+                                <i class="fas fa-link me-2 text-info"></i>Enlaces</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="imagenes.html" data-page="imagenes">
+                                <i class="fas fa-images me-2 text-warning"></i>Imágenes</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-table me-1"></i><span class="d-none d-lg-inline">Estructuras</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="tablas.html" data-page="tablas">
+                                <i class="fas fa-table me-2 text-primary"></i>Tablas</a></li>
+                            <li><a class="dropdown-item" href="formulario.html" data-page="formulario">
+                                <i class="fas fa-wpforms me-2 text-success"></i>Formularios</a></li>
+                            <li><a class="dropdown-item" href="inputs.html" data-page="inputs">
+                                <i class="fas fa-keyboard me-2 text-info"></i>Inputs</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="semantica.html" data-page="semantica">
+                                <i class="fas fa-sitemap me-2 text-warning"></i>HTML Semántico</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-play-circle me-1"></i><span class="d-none d-lg-inline">Multimedia</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="fotoVideo.html" data-page="fotoVideo">
+                                <i class="fas fa-video me-2 text-primary"></i>Audio y Video</a></li>
+                            <li><a class="dropdown-item" href="iframe.html" data-page="iframe">
+                                <i class="fas fa-window-maximize me-2 text-success"></i>iFrames</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link px-3 rounded-pill mx-1" href="ejercicios.html" data-page="ejercicios">
+                            <i class="fas fa-laptop-code me-1"></i><span class="d-none d-lg-inline">Ejercicios</span>
+                        </a>
+                    </li>
                 </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="me-3 d-none d-md-block">
+                        <small class="text-light opacity-75">Progreso:</small>
+                        <div class="progress bg-secondary" style="width: 80px; height: 4px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 8%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/JhonHurtado/html_basico" target="_blank" rel="noopener"
+                       class="btn btn-outline-light btn-sm rounded-pill me-2">
+                        <i class="fab fa-github"></i><span class="d-none d-lg-inline ms-1">GitHub</span>
+                    </a>
+                    
+                    <a href="BEST_PRACTICES.md" target="_blank"
+                       class="btn btn-warning btn-sm rounded-pill">
+                        <i class="fas fa-book"></i><span class="d-none d-lg-inline ms-1">Guía</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="container py-5">
-        <!-- Header mejorado -->
-        <div class="row mb-5">
-            <div class="col-lg-12 text-center">
-                <h1 class="display-4 mb-3">Estructura de un Documento HTML</h1>
-                <p class="lead text-muted">Aprende los elementos fundamentales que componen una página web HTML</p>
-                <hr class="my-4">
+    <!-- Hero Section -->
+    <header class="bg-gradient text-white py-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">
+                        Aprende <span class="text-warning">HTML</span> desde Cero
+                    </h1>
+                    <p class="lead mb-4">
+                        Domina los fundamentos del desarrollo web con nuestra guía interactiva y completa de HTML5.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#estructura" class="btn btn-warning btn-lg shadow">
+                            <i class="fas fa-play me-2"></i>Comenzar
+                        </a>
+                        <a href="ejercicios.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-code me-2"></i>Ejercicios
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="highlight-box bg-white text-dark">
+                        <i class="fas fa-code text-primary" style="font-size: 4rem;"></i>
+                        <h3 class="mt-3">Estructura Clara</h3>
+                        <p>Aprende paso a paso con ejemplos prácticos</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </header>
 
-        <!-- Introducción -->
-        <div class="row mb-5">
+    <main class="container">
+        <!-- Progress Indicator -->
+        <div class="row mb-4">
             <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <p class="card-text">HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Todo archivo HTML tiene una estructura básica compuesta por etiquetas principales que definen su organización y contenido.</p>
+                <div class="card border-primary">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-primary">
+                            <i class="fas fa-route me-2"></i>Tu Ruta de Aprendizaje
+                        </h5>
+                        <div class="progress mb-3" style="height: 8px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 8%"></div>
+                        </div>
+                        <small class="text-muted">Módulo 1 de 12 - Estructura HTML</small>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Estructura Básica -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h2 class="h5 mb-0"><i class="fas fa-sitemap me-2"></i>Estructura Básica</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-4">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-file-code me-2"></i>DOCTYPE</h3>
-                                    <code>&lt;!DOCTYPE html&gt;</code>
-                                    <p class="mb-0 mt-2">Define el tipo de documento como HTML5. Es la primera línea de todo documento HTML.</p>
+        <!-- Main Content: HTML Structure -->
+        <section id="estructura" class="mb-5">
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">
+                        <i class="fas fa-sitemap me-2"></i>Estructura de un Documento HTML
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="alert alert-info border-0">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>¿Qué es HTML?</strong> HTML (HyperText Markup Language) es el lenguaje estándar 
+                                para crear páginas web. Define la estructura y contenido mediante etiquetas.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-file-code"></i>
+                                    </div>
+                                    <h5 class="card-title">DOCTYPE</h5>
+                                    <code class="d-block mb-2">&lt;!DOCTYPE html&gt;</code>
+                                    <p class="card-text small">Declara que el documento es HTML5</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-code me-2"></i>HTML</h3>
-                                    <code>&lt;html&gt;</code>
-                                    <p class="mb-0 mt-2">Es el elemento raíz que contiene todo el documento HTML. Define el inicio y fin del documento.</p>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="bg-success text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h5 class="card-title">HTML</h5>
+                                    <code class="d-block mb-2">&lt;html lang="es"&gt;</code>
+                                    <p class="card-text small">Elemento raíz que contiene todo</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-brain me-2"></i>HEAD</h3>
-                                    <code>&lt;head&gt;</code>
-                                    <p class="mb-0 mt-2">Contiene metadatos, título de la página, enlaces a CSS y otros recursos no visibles.</p>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="bg-warning text-dark rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h5 class="card-title">HEAD</h5>
+                                    <code class="d-block mb-2">&lt;head&gt;</code>
+                                    <p class="card-text small">Metadatos no visibles al usuario</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-paint-brush me-2"></i>BODY</h3>
-                                    <code>&lt;body&gt;</code>
-                                    <p class="mb-0 mt-2">Contiene todo el contenido visible de la página web como texto, imágenes y enlaces.</p>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="bg-info text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <h5 class="card-title">BODY</h5>
+                                    <code class="d-block mb-2">&lt;body&gt;</code>
+                                    <p class="card-text small">Contenido visible de la página</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Ejemplo Práctico -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h2 class="h5 mb-0"><i class="fas fa-laptop-code me-2"></i>Ejemplo Práctico</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="p-4 bg-light border rounded">
-                                    <h3 class="h5 mb-3">Vista Previa</h3>
-                                    <div class="bg-white p-3 border rounded">
-                                        <h1 class="h4">Hola, Mundo!</h1>
-                                        <p class="text-muted"><small>Este es el resultado visual del código HTML</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-4">
-                                    <h3 class="h5 mb-3">Código Fuente</h3>
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9em;">
-&lt;!DOCTYPE html&gt;
+        <!-- Code Example Section -->
+        <section class="mb-5">
+            <div class="card shadow border-0">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="h5 mb-0">
+                        <i class="fas fa-laptop-code me-2"></i>Ejemplo Completo
+                    </h3>
+                </div>
+                <div class="card-body p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="p-4">
+                                <h5 class="mb-3">
+                                    <i class="fas fa-code text-primary me-2"></i>Código HTML
+                                </h5>
+                                <pre class="mb-0"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Mi Primera Página&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Hola, Mundo!&lt;/h1&gt;
+    &lt;header&gt;
+        &lt;h1&gt;¡Hola, Mundo!&lt;/h1&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;p&gt;Este es mi primer documento HTML5.&lt;/p&gt;
+    &lt;/main&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 bg-light">
+                            <div class="p-4 h-100">
+                                <h5 class="mb-3">
+                                    <i class="fas fa-eye text-success me-2"></i>Resultado Visual
+                                </h5>
+                                <div class="border rounded p-3 bg-white h-75 d-flex flex-column">
+                                    <div class="mb-3">
+                                        <span class="badge bg-secondary mb-2">Header</span>
+                                        <h2 class="h4 mb-0">¡Hola, Mundo!</h2>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <span class="badge bg-primary mb-2">Main</span>
+                                        <p class="mb-0">Este es mi primer documento HTML5.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="mb-5">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h3 class="h5 mb-0">
+                        <i class="fas fa-arrow-right me-2"></i>Próximos Pasos
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <a href="encabezadosParrafos.html" class="card text-decoration-none h-100 shadow-hover">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-heading text-primary mb-3" style="font-size: 2rem;"></i>
+                                    <h5 class="card-title">Encabezados</h5>
+                                    <p class="card-text small">Aprende h1, h2, h3 y párrafos</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="listas.html" class="card text-decoration-none h-100 shadow-hover">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-list text-warning mb-3" style="font-size: 2rem;"></i>
+                                    <h5 class="card-title">Listas</h5>
+                                    <p class="card-text small">Organiza contenido con listas</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="enlaces.html" class="card text-decoration-none h-100 shadow-hover">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-link text-info mb-3" style="font-size: 2rem;"></i>
+                                    <h5 class="card-title">Enlaces</h5>
+                                    <p class="card-text small">Conecta páginas y recursos</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-code me-2"></i>HTML Básico</h5>
+                    <p class="mb-0">Guía completa para aprender desarrollo web desde cero.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="mb-2">
+                        <a href="https://github.com/JhonHurtado/html_basico" class="text-light me-3" target="_blank" rel="noopener">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                        <a href="BEST_PRACTICES.md" class="text-light">
+                            <i class="fas fa-book me-1"></i>Mejores Prácticas
+                        </a>
+                    </div>
+                    <small class="text-muted">© 2025 - Proyecto Educativo Open Source</small>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <!-- Footer -->
-        <footer class="mt-5 py-4 text-center border-top">
-            <p class="mb-0 text-muted">
-                <i class="fas fa-code me-2"></i>
-                &copy; 2025 - Guía HTML Básica. Todos los derechos reservados.
-            </p>
-        </footer>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get current page from URL
+            const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+            
+            // Set active nav item
+            const navLinks = document.querySelectorAll('[data-page]');
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('data-page');
+                if (linkPage === currentPage) {
+                    link.classList.add('active', 'bg-warning', 'text-dark');
+                    link.style.fontWeight = 'bold';
+                }
+            });
+            
+            // Update progress based on current page
+            const pageOrder = ['index', 'encabezadosParrafos', 'listas', 'enlaces', 'imagenes', 'tablas', 'formulario', 'inputs', 'fotoVideo', 'iframe', 'semantica', 'ejercicios'];
+            const currentIndex = pageOrder.indexOf(currentPage);
+            const progressPercent = currentIndex >= 0 ? ((currentIndex + 1) / pageOrder.length) * 100 : 8;
+            
+            const progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                setTimeout(() => {
+                    progressBar.style.width = progressPercent + '%';
+                }, 500);
+            }
+        });
+    </script>
+    
+    <style>
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+        .dropdown-menu {
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }
+        .dropdown-item {
+            padding: 0.75rem 1.25rem;
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #fff, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </body>
 </html>
