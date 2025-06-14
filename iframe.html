@@ -3,132 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iframes en HTML</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Aprende a usar iframes en HTML - Integración de contenido externo">
+    <title>iFrames en HTML | HTML Básico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="bg-light">
-    <!-- Navbar mejorado -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+<body class="fade-in">
+    
+    <!-- Navbar Optimizado -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg" style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 50%, #495057 100%);">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="fas fa-code me-2"></i>
-                Guía HTML
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                <i class="fas fa-code me-2 text-warning fs-4"></i>
+                <span class="text-gradient">HTML Básico</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-sitemap me-1"></i>Estructura</a></li>
-                    <li class="nav-item"><a class="nav-link" href="encabezadosParrafos.html"><i class="fas fa-heading me-1"></i>Encabezados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="listas.html"><i class="fas fa-list me-1"></i>Listas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tablas.html"><i class="fas fa-table me-1"></i>Tablas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="formulario.html"><i class="fas fa-wpforms me-1"></i>Formulario</a></li>
-                    <li class="nav-item"><a class="nav-link" href="inputs.html"><i class="fas fa-keyboard me-1"></i>Inputs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fotoVideo.html"><i class="fas fa-play-circle me-1"></i>Audio y Video</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="iframe.html"><i class="fas fa-window-maximize me-1"></i>Iframes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="semantica.html"><i class="fas fa-project-diagram me-1"></i>Semántica</a></li>
-                    <li class="nav-item"><a class="nav-link" href="imagenes.html"><i class="fas fa-images me-1"></i>Imágenes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="enlaces.html"><i class="fas fa-link me-1"></i>Enlaces</a></li>
+                <ul class="navbar-nav ms-auto me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 rounded-pill mx-1" href="index.html" data-page="index">
+                            <i class="fas fa-home me-1"></i><span class="d-none d-lg-inline">Inicio</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-graduation-cap me-1"></i><span class="d-none d-lg-inline">Fundamentos</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="encabezadosParrafos.html" data-page="encabezadosParrafos">
+                                <i class="fas fa-heading me-2 text-primary"></i>Encabezados y Párrafos</a></li>
+                            <li><a class="dropdown-item" href="listas.html" data-page="listas">
+                                <i class="fas fa-list me-2 text-success"></i>Listas</a></li>
+                            <li><a class="dropdown-item" href="enlaces.html" data-page="enlaces">
+                                <i class="fas fa-link me-2 text-info"></i>Enlaces</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="imagenes.html" data-page="imagenes">
+                                <i class="fas fa-images me-2 text-warning"></i>Imágenes</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-table me-1"></i><span class="d-none d-lg-inline">Estructuras</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="tablas.html" data-page="tablas">
+                                <i class="fas fa-table me-2 text-primary"></i>Tablas</a></li>
+                            <li><a class="dropdown-item" href="formulario.html" data-page="formulario">
+                                <i class="fas fa-wpforms me-2 text-success"></i>Formularios</a></li>
+                            <li><a class="dropdown-item" href="inputs.html" data-page="inputs">
+                                <i class="fas fa-keyboard me-2 text-info"></i>Inputs</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="semantica.html" data-page="semantica">
+                                <i class="fas fa-sitemap me-2 text-warning"></i>HTML Semántico</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3 rounded-pill mx-1" href="#" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-play-circle me-1"></i><span class="d-none d-lg-inline">Multimedia</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="fotoVideo.html" data-page="fotoVideo">
+                                <i class="fas fa-video me-2 text-primary"></i>Audio y Video</a></li>
+                            <li><a class="dropdown-item" href="iframe.html" data-page="iframe">
+                                <i class="fas fa-window-maximize me-2 text-success"></i>iFrames</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link px-3 rounded-pill mx-1" href="ejercicios.html" data-page="ejercicios">
+                            <i class="fas fa-laptop-code me-1"></i><span class="d-none d-lg-inline">Ejercicios</span>
+                        </a>
+                    </li>
                 </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="me-3 d-none d-md-block">
+                        <small class="text-light opacity-75">Progreso:</small>
+                        <div class="progress bg-secondary" style="width: 80px; height: 4px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 83%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/JhonHurtado/html_basico" target="_blank" rel="noopener"
+                       class="btn btn-outline-light btn-sm rounded-pill me-2">
+                        <i class="fab fa-github"></i><span class="d-none d-lg-inline ms-1">GitHub</span>
+                    </a>
+                    
+                    <a href="BEST_PRACTICES.md" target="_blank"
+                       class="btn btn-warning btn-sm rounded-pill">
+                        <i class="fas fa-book"></i><span class="d-none d-lg-inline ms-1">Guía</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <div class="container py-5">
-        <!-- Header mejorado -->
         <div class="row mb-5">
             <div class="col-lg-12 text-center">
-                <h1 class="display-4 mb-3">Iframes en HTML</h1>
-                <p class="lead text-muted">Aprende a incorporar contenido externo en tus páginas web</p>
+                <h1 class="display-4 mb-3">iFrames en HTML</h1>
+                <p class="lead text-muted">Aprende a integrar contenido externo en tus páginas web</p>
                 <hr class="my-4">
             </div>
         </div>
 
-        <!-- Introducción -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <p class="card-text">La etiqueta <code>&lt;iframe&gt;</code> permite incrustar contenido web externo como mapas, videos o páginas completas dentro de tu sitio. Es una herramienta versátil para integrar contenido sin redirigir a los usuarios.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Atributos Comunes -->
-        <div class="row mb-5">
+        <div class="row g-4">
             <div class="col-12">
                 <div class="card shadow-sm">
                     <div class="card-header bg-primary text-white">
-                        <h2 class="h5 mb-0"><i class="fas fa-cogs me-2"></i>Atributos Comunes</h2>
+                        <h2 class="h5 mb-0"><i class="fas fa-window-maximize me-2"></i>Video de YouTube</h2>
                     </div>
                     <div class="card-body">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-link me-2"></i>src</h3>
-                                    <p class="mb-0">Especifica la URL del contenido que se va a incrustar en el iframe.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-arrows-alt me-2"></i>width y height</h3>
-                                    <p class="mb-0">Definen el ancho y alto del iframe en píxeles o porcentaje.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="border rounded p-3 h-100 bg-light">
-                                    <h3 class="h5 text-primary"><i class="fas fa-expand me-2"></i>allowfullscreen</h3>
-                                    <p class="mb-0">Permite que el contenido se pueda ver en pantalla completa.</p>
-                                </div>
-                            </div>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="YouTube video player" 
+                                    allowfullscreen>
+                            </iframe>
                         </div>
+                        
+                        <h6>Código:</h6>
+                        <pre class="bg-dark text-light p-3 rounded"><code>&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+        title="YouTube video player" 
+        allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Ejemplo Práctico -->
-        <div class="row mb-5">
-            <div class="col-12">
+            
+            <div class="col-md-6">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h2 class="h5 mb-0"><i class="fas fa-map-marked-alt me-2"></i>Ejemplo de Iframe</h2>
+                    <div class="card-header bg-success text-white">
+                        <h3 class="h5 mb-0"><i class="fas fa-map me-2"></i>Mapa de Google</h3>
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 class="h5 mb-3">Mapa Incrustado</h3>
-                                <div class="ratio ratio-4x3">
-                                    <iframe 
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.963057715316!3d-37.814107979751554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779f0aa3e13a0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1637313814083!5m2!1sen!2sau"
-                                        class="border-0"
-                                        allowfullscreen=""
-                                        loading="lazy">
-                                    </iframe>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 class="h5 mb-3">Código del Iframe</h3>
-                                <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9em;">
-&lt;iframe 
-    src="https://www.google.com/maps/embed?..."
-    width="600" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy"&gt;
-&lt;/iframe&gt;</pre>
-                            </div>
-                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.8267!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicxMy42Ilc!5e0!3m2!1ses!2ses!4v1234567890" 
+                                width="100%" height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="h5 mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Consideraciones de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Usa <code>sandbox</code> para restringir capacidades
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Valida siempre el origen del contenido
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Considera el rendimiento de carga
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-success me-2"></i>
+                                Usa <code>loading="lazy"</code> cuando sea posible
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Footer mejorado -->
         <footer class="mt-5 py-4 text-center border-top">
             <p class="mb-0 text-muted">
                 <i class="fas fa-code me-2"></i>
@@ -137,6 +195,64 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+            
+            const navLinks = document.querySelectorAll('[data-page]');
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('data-page');
+                if (linkPage === currentPage) {
+                    link.classList.add('active', 'bg-warning', 'text-dark');
+                    link.style.fontWeight = 'bold';
+                }
+            });
+            
+            const pageOrder = ['index', 'encabezadosParrafos', 'listas', 'enlaces', 'imagenes', 'tablas', 'formulario', 'inputs', 'fotoVideo', 'iframe', 'semantica', 'ejercicios'];
+            const currentIndex = pageOrder.indexOf(currentPage);
+            const progressPercent = currentIndex >= 0 ? ((currentIndex + 1) / pageOrder.length) * 100 : 83;
+            
+            const progressBar = document.querySelector('.progress-bar');
+            if (progressBar) {
+                setTimeout(() => {
+                    progressBar.style.width = progressPercent + '%';
+                }, 500);
+            }
+        });
+    </script>
+    
+    <style>
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+        .dropdown-menu {
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }
+        .dropdown-item {
+            padding: 0.75rem 1.25rem;
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            transform: translateX(5px);
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #fff, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </body>
 </html>
